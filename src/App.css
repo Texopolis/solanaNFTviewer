@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+*{
+  padding:none;
+  box-sizing: border-box;
+  margin:none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  /* border:1px solid red; */
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  background-color:#020204;
+  background-image: linear-gradient(to left top, #14f195, #00e3cd, #00cff8, #00b6ff, #0097ff, #2d7cef, #4a60db, #5f3fc1, #3e3591, #262762, #161934, #020204);  font-family: 'Fira Sans Condensed', sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+
+input{
+  font-family: 'Press Start 2P', cursive;
+  border:1px solid #f945ff;
+  border-radius:5px;
+  background-color: #02020415;
+  padding:.65em;
+  color:white;
+}
+
+::placeholder{
+  color:#14f195;
+}
+
+.search{
+  display:flex;
+  justify-content: space-around;
+  flex-direction:column;
+  padding:2em;
+  }
+
+.title{
+  color:rgb(20, 17, 17);
+  padding:0px;
+  margin-bottom:.2em;
+  font-size:2.3rem;
+  font-family: 'Press Start 2P';
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #9945ff, 0 0 70px #9945ff, 0 0 80px #9945ff, 0 0 100px #9945ff, 0 0 150px #9945ff;
+}
+
+.address{
+  flex: 1;
+  margin-left:20px;
+  width:70vw;
+}
+
+.randomText{
+  color:#9945ff;
+  cursor: pointer;
+  margin-left:20px;
+  padding:5px;
+  font-family: 'Press Start 2P';
+  font-size: 10px;
+}
+
+.sort{
+  display:flex;
+  justify-content:space-between;
   align-items: center;
+  }
+
+  .sortBtns{
+    margin:1em;
+  }
+
+.btn{
+  background: #7F00FF;  
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  background: linear-gradient(to right, #E100FF, #7F00FF); 
+  color:white;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  border-radius:5px;
+  border:none;
+  outline:none;
+  cursor: pointer;
+  padding:.25em 1em;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  height:3em;
+  width: 12em;
+  text-transform: uppercase;
+}
+
+.nftContainer{
+  display:flex;
+  align-items:center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nfts{
+  display:grid;
+  width:100%;
+  grid-gap:1.5em;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  justify-items: center;
+  padding:2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a{
+  text-decoration:none;
 }
+
+.card{
+  display:flex;
+  flex-direction: column;
+  border-radius:15px;
+  text-align: center;
+  transition: all .15s ease;
+  background: #7F7FD5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position:relative;
+}
+
+.star{
+  width:30px;
+  height:30px;
+  position:absolute;
+  top:5px;
+  right:5px;
+  transition: all .15s ease;
+
+}
+
+.img{
+  width: 100%;
+  height:220px;
+  object-fit: cover;
+  border-radius:15px;
+  cursor: pointer;
+  margin:0;
+  padding:.25em;
+}
+
+.numEdition{
+  position:absolute;
+  right:8px;
+  top:28px;
+  color:rgb(238, 255, 0);
+  font-weight: bold;
+  font-family: 'lato';
+  font-size:10px;
+
+}
+
+.card-title{
+  color:rgba(50, 11, 61, 0.767);
+  padding:.75em;
+  text-transform: uppercase;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-family: Lato;
+  font-size:1rem;
+  font-weight:bold;
+  margin:0;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform:scale(1.05);
+  box-shadow: #9945ff 0px 19px 38px, #9945ff 0px 15px 12px;
+}
+
+
